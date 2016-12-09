@@ -108,6 +108,10 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
     return jsonObject;
   }
 
+  public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data){
+    onActivityResult(requestCode, resultCode, data);
+  }
+
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent data){
     if (requestCode != RZP_REQUEST_CODE) return;
